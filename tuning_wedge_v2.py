@@ -332,7 +332,7 @@ for model in range(0, nmodel):
     syn_buf = np.convolve(rc, wvlt_amp, mode='same')
     syn_buf = list(syn_buf)
     syn_zo.append(syn_buf)
-    print "finished step %i" % (model)
+    print("finished step %i" % (model))
     
 syn_zo = np.array(syn_zo)
 t = np.array(t)

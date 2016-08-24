@@ -400,7 +400,7 @@ for i in range(0,nsamp):
 
 syn_zoep_pp = []
 lyr_times = []
-print "\n\nStarting synthetic calcuations...\n"
+print("\n\nStarting synthetic calcuations...\n")
 for angle in range(0, nangles):
     
     dz_app = thickness
@@ -426,7 +426,7 @@ for angle in range(0, nangles):
     syn_buf = np.convolve(rc, wvlt_amp, mode='same')
     syn_buf = list(syn_buf)
     syn_zoep_pp.append(syn_buf)
-    print "Calculated angle %i" % (angle)
+    print("Calculated angle %i" % (angle))
 
 
 #    Convert data arrays from lists/tuples to numpy arrays    
@@ -473,11 +473,11 @@ X = np.hstack((ones, sintheta2))
 Azoep = np.dot(np.dot(np.linalg.inv(np.dot(X.T, X)), X.T), Yzoep)
 Aconv = np.dot(np.dot(np.linalg.inv(np.dot(X.T, X)), X.T), Yconv)
 
-print'\n\n'
-print '  Method       NI         GRAD'
-print '---------------------------------'
-print ' Zoeppritz%11.5f%12.5f' % (Azoep[0], Azoep[1])
-print ' Convolved%10.5f%12.5f' % (Aconv[0], Aconv[1])
+print('\n\n')
+print('  Method       NI         GRAD')
+print('---------------------------------')
+print(' Zoeppritz%11.5f%12.5f' % (Azoep[0], Azoep[1]))
+print(' Convolved%10.5f%12.5f' % (Aconv[0], Aconv[1]))
 
 
     
